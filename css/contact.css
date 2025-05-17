@@ -1,0 +1,224 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'black';
+    font-weight:400;
+    src:url(../font/poppins-black-webfont.woff2) format('woff2'),
+        url(../font/poppins-black-webfont.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'medium';
+    src:url(../font/poppins-medium-webfont.woff2) format('woff2'),
+        url(../font/poppins-medium-webfont.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'regular';
+    src:url(../font/poppins-regular-webfont.woff2) format('woff2'),
+        url(../font/poppins-regular-webfont.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'light';
+    src:url(../font/poppins-light-webfont.woff2) format('woff2'),
+        url(../font/poppins-light-webfont.woff) format('woff');
+}
+
+body {
+    height: 100%; 
+    background-image: url(../images/bg.jpg);
+    background-position: center;
+   
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    padding: 25px 5%;
+}
+
+nav{
+    width: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+nav .logo{
+    width: 225px;
+    cursor: pointer;
+    transition: transform 1s;
+}
+
+nav .logo:hover{
+    transform: scale(1.1);
+}
+
+nav .menu-img{
+    width: 40px;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+nav .menu-img:hover{
+    transform: scale(1.1);
+}
+
+nav ul{
+    flex: 1;
+    text-align: right;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+nav ul li{ 
+    list-style: none;
+    display:inline-block;
+    margin: 10px 30px;
+    font-family: 'regular';
+    border: 2px solid  #72fa93;
+    border-radius: 20px;
+    border-top-right-radius: 0;
+    padding: 10px;
+    transition: 1s;
+    width:6rem;
+    text-align: center;
+    background-color:#F5F5DC;
+}
+
+.custom-link{ 
+    background-image:linear-gradient( 50deg, #72fa93, #a0e548);
+    box-shadow: black 2px 1px;
+}
+
+nav ul li:hover{ 
+    background-color:  #72fa93;
+    box-shadow: black 2px 1px;
+    background-image:linear-gradient( 50deg, #72fa93, #a0e548);
+    border-top-right-radius: 20px;
+ }
+ 
+nav ul li a{
+    text-decoration:none;
+    color: black;
+    font-weight: 600;
+    position: relative;
+    font-size:15px;
+}
+
+/* contact.css */
+
+
+.contact-left {
+    margin: 1rem 0 0 6rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    padding: 30px;
+    background-color: #ffffff33;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+label{
+ font-family:'regular';
+ margin-right: 5px;
+ margin-left: 8px;
+}
+
+.contact-left h2 {
+    font-family:'black';
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.contact-left input {
+    width: 100%;
+    padding: 10px;
+    margin:15px 5px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    border-top-right-radius: 0;
+    font-family:'regular';
+}
+
+.text{
+   max-width: 20rem;
+}
+
+.concern{
+   height:5rem;
+}
+
+.contact-left button {
+    background-color: #4CAF50; 
+    font-family: 'regular';
+    border: 2px solid #72fa93;
+    color:black;
+    text-decoration:none;
+    position: relative;
+    border-radius: 20px;
+    border-top-right-radius: 0;
+    padding: 10px;
+    transition: 1s;
+    width:8rem;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    background-color:#F5F5DC;
+    text-align: center;
+    white-space:nowrap;
+    margin-bottom: 15px;
+}
+
+.contact-left button:hover {
+    background-color:  #72fa93;
+    box-shadow: black 2px 1px;
+    background-image:linear-gradient( 50deg, #72fa93, #a0e548);
+    border-top-right-radius: 20px;
+}
+
+.message {
+    font-family: 'light';
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    animation: fade-in 0.5s ease-out, fade-out 0.5s ease-in 4.5s forwards;
+}
+.success {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff33;
+}
+.error {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff33;
+}
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+@keyframes fade-out {
+    to {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-10px);
+    }
+}
